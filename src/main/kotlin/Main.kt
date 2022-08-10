@@ -8,16 +8,14 @@
  */
 
 fun main() {
-    menu()
+    println("Kotlin Calculator")
+    askNumbers()
+    askOperator()
 }
 
 var firstNumber: Float? = null
 var secondNumber: Float? = null
 var operator = 0
-
-fun menu() {
-    println("Kotlin Calculator")
-}
 
 fun askNumbers() {
     println("Inform the first number: ")
