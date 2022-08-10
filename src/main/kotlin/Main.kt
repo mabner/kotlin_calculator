@@ -1,7 +1,29 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+/**
+ *
+ * Com os conhecimentos aplicatos anteriormente,
+ * vamos criar uma calculadora que dado dois valores Float? e
+ * um número correspondente a operação (constante),
+ * retorne e imprima o resultado como Float ou
+ * uma mensagem de erro caso um dos valores seja nulo.
+ */
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    menu()
+}
+
+var firstNumber: Float? = null
+var secondNumber: Float? = null
+var operator = 0
+
+fun menu() {
+    println("Kotlin Calculator")
+    println("Inform the first number: ")
+    firstNumber = readln().toFloat()
+    println("Select the operator:")
+    println("1 - Add    3 - Mult")
+    println("2 - Sub    4 - Div")
+    operator = readln().toInt()
+    println("Inform the second number: ")
+    secondNumber = readln().toFloat()
+
 }
