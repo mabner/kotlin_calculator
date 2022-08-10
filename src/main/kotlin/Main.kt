@@ -17,13 +17,18 @@ var operator = 0
 
 fun menu() {
     println("Kotlin Calculator")
+}
+
+fun askNumbers() {
     println("Inform the first number: ")
     firstNumber = readln().toFloat()
+    println("Inform the second number: ")
+    secondNumber = readln().toFloat()
+}
+
+fun askOperator() {
     println("Select the operator:")
     println("1 - Add    3 - Mult")
     println("2 - Sub    4 - Div")
     operator = readln().toInt()
-    println("Inform the second number: ")
-    secondNumber = readln().toFloat()
-
 }
