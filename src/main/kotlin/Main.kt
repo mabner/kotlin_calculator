@@ -26,8 +26,8 @@ fun askNumbers() {
 
 fun askOperator() {
     println("Select the operator:")
-    println("1 - Add    3 - Mult")
-    println("2 - Sub    4 - Div")
+    println("1 - Addition    3 - Multiplication")
+    println("2 - Subtraction    4 - Division")
     operator = readln().toInt()
 }
 
