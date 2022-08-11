@@ -30,3 +30,36 @@ fun askOperator() {
     println("2 - Sub    4 - Div")
     operator = readln().toInt()
 }
+
+fun exit() {
+    println("Restart? Y / N")
+    restart = readln().uppercase()
+    if (restart == "Y") {
+        main()
+    } else if (restart == "N") {
+        exitProcess(1)
+    } else {
+        println("Invalid option. Choose either Y or N")
+        exit()
+    }
+}
+
+fun calculation() {
+    val operatorSign = when (operator) {
+        1 -> "+"
+        2 -> "-"
+        3 -> "*"
+        4 -> "/"
+        else -> "Invalid operator"
+    }
+
+    val result = when (operator) {
+        1 -> firstNumber + secondNumber
+        2 -> firstNumber - secondNumber
+        3 -> firstNumber * secondNumber
+        4 -> firstNumber / secondNumber
+        else -> println("Please select a valid operator option.")
+    }
+    println("$firstNumber $operatorSign $secondNumber = $result")
+    exit()
+}
