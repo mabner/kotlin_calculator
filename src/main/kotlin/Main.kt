@@ -1,3 +1,5 @@
+import kotlin.system.exitProcess
+
 /**
  *
  * Com os conhecimentos aplicatos anteriormente,
@@ -11,11 +13,13 @@ fun main() {
     println("Kotlin Calculator")
     askNumbers()
     askOperator()
+    calculation()
 }
 
-var firstNumber: Float? = null
-var secondNumber: Float? = null
+var firstNumber: Float = 0.0F
+var secondNumber: Float = 0.0F
 var operator = 0
+var restart: String = ""
 
 fun askNumbers() {
     println("Inform the first number: ")
